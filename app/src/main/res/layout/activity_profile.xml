@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.ProfileSetupActivity">
+
+    <ImageView
+        android:id="@+id/profile_i_profilepic"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:contentDescription="@string/profilepic_update"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/empty_profile_pic"
+        android:layout_marginTop="10dp"
+        />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/profile_cl_name"
+        android:layout_width="400dp"
+        android:layout_height="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profile_i_profilepic"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/profile_text_name"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            app:layout_constraintEnd_toStartOf="@id/profile_et_name"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="@string/name"
+            android:gravity="center"/>
+
+        <EditText
+            android:id="@+id/profile_et_name"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:ems="10"
+            android:inputType="text"
+            android:text=""
+            app:layout_constraintStart_toEndOf="@id/profile_text_name"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:autofillHints="name"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/profile_cl_surname"
+        android:layout_width="400dp"
+        android:layout_height="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profile_cl_name"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/profile_text_surname"
+            android:layout_width="150dp"
+            android:gravity="center"
+            android:layout_height="50dp"
+            android:text="@string/surname"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/profile_et_surname"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/profile_et_surname"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:ems="10"
+            android:inputType="text"
+            android:text=""
+            app:layout_constraintStart_toEndOf="@id/profile_text_surname"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:importantForAutofill="no"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/profile_cl_email"
+        android:layout_width="400dp"
+        android:layout_height="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profile_cl_surname"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/profile_text_email"
+            android:layout_width="150dp"
+            android:gravity="center"
+            android:layout_height="50dp"
+            android:text="@string/email"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/profile_et_email"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/profile_et_email"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:ems="10"
+            android:inputType="textEmailAddress"
+            android:text=""
+            app:layout_constraintStart_toEndOf="@id/profile_text_email"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:autofillHints="emailAddress" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/profile_cl_phone"
+        android:layout_width="400dp"
+        android:layout_height="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profile_cl_email"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/profile_text_phone"
+            android:layout_width="150dp"
+            android:gravity="center"
+            android:layout_height="50dp"
+            android:text="@string/phone_number"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/profile_et_phone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/profile_et_phone"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:ems="10"
+            android:inputType="phone"
+            android:hint="05551234567"
+            app:layout_constraintStart_toEndOf="@id/profile_text_phone"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:autofillHints="emailAddress"
+            tools:ignore="HardcodedText" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/profile_cl_department"
+        android:layout_width="400dp"
+        android:layout_height="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profile_cl_phone"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/profile_text_department"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="@string/department"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/profile_et_department"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/profile_et_department"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="phone"
+            android:hint="@string/department"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/profile_text_department"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/profile_cl_year_class"
+        android:layout_width="400dp"
+        android:layout_height="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profile_cl_department"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/profile_text_year_class"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="@string/year_class"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/profile_et_year_class"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/profile_et_year_class"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="phone"
+            android:hint="@string/year_class"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/profile_text_year_class"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/profile_cl_distance_to_campus"
+        android:layout_width="400dp"
+        android:layout_height="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profile_cl_year_class"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/profile_text_distance_to_campus"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="@string/distance_to_campus"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/profile_et_distance_to_campus"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/profile_et_distance_to_campus"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="phone"
+            android:hint="@string/distance_to_campus"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/profile_text_distance_to_campus"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/profile_cl_bottom"
+        android:layout_width="400dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profile_cl_distance_to_campus">
+
+        <EditText
+            android:id="@+id/profile_et_status"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:ems="10"
+            android:inputType="phone"
+            android:hint="@string/status"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/profile_et_duration"
+            android:autofillHints="emailAddress" />
+
+        <EditText
+            android:id="@+id/profile_et_duration"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:ems="10"
+            android:inputType="phone"
+            android:hint="@string/duration"
+            app:layout_constraintStart_toEndOf="@id/profile_et_status"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:autofillHints="emailAddress" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/profile_button_saveprofile"
+        android:layout_width="160dp"
+        android:layout_height="50dp"
+        android:text="@string/update_profile"
+        app:layout_constraintTop_toBottomOf="@id/profile_cl_bottom"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"/>
+
+    <Button
+        android:id="@+id/profile_button_send_match_request"
+        android:layout_width="160dp"
+        android:layout_height="50dp"
+        android:text="@string/send_match_request"
+        app:layout_constraintTop_toBottomOf="@id/profile_cl_bottom"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"/>
+
+    <Button
+        android:id="@+id/profile_button_go_main_menu"
+        android:layout_width="160dp"
+        android:layout_height="50dp"
+        android:text="@string/go_back_to_main"
+        app:layout_constraintTop_toBottomOf="@id/profile_cl_bottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"/>
+
+    <ProgressBar
+        android:id="@+id/profile_progressbar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/profile_button_go_main_menu"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="gone"
+
+        />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

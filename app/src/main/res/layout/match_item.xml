@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="8dp"
+    app:cardCornerRadius="8dp"
+    android:layout_marginTop="5dp"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/match_item_cl"
+        android:layout_width="400dp"
+        android:layout_height="190dp"
+        >
+
+
+        <ImageView
+            android:id="@+id/match_item_profilepic"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            app:layout_constraintEnd_toStartOf="@id/match_item_name_surname"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/empty_profile_pic"
+            android:padding="3dp"/>
+
+        <TextView
+            android:id="@+id/match_item_name_surname"
+            android:layout_width="125dp"
+            android:layout_height="25dp"
+            android:text="@string/name_surname"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/match_item_profilepic"
+            app:layout_constraintEnd_toStartOf="@id/match_item_status"
+            app:layout_constraintBottom_toTopOf="@id/match_item_department"
+            android:paddingStart="10dp"/>
+
+        <TextView
+            android:id="@+id/match_item_status"
+            android:layout_width="200dp"
+            android:layout_height="25dp"
+            android:text="@string/status"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/match_item_name_surname"
+            app:layout_constraintBottom_toTopOf="@id/match_item_department"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:paddingStart="10dp"/>
+
+        <TextView
+            android:id="@+id/match_item_department"
+            android:layout_width="125dp"
+            android:layout_height="25dp"
+            android:text="@string/department"
+            app:layout_constraintStart_toEndOf="@id/match_item_profilepic"
+            app:layout_constraintTop_toBottomOf="@id/match_item_name_surname"
+            android:paddingStart="10dp"/>
+
+        <TextView
+            android:id="@+id/match_item_year_class"
+            android:layout_width="125dp"
+            android:layout_height="25dp"
+            android:text="@string/year_class"
+            app:layout_constraintStart_toEndOf="@id/match_item_profilepic"
+            app:layout_constraintTop_toBottomOf="@id/match_item_department"
+            android:paddingStart="10dp"/>
+
+        <LinearLayout
+            android:id="@+id/match_ll_mail"
+            android:layout_width="165dp"
+            android:layout_height="35dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/match_item_year_class"
+            android:background="@color/cardview_shadow_start_color"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="25dp">
+
+            <ImageView
+                android:id="@+id/match_item_mail_png"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                app:srcCompat="@drawable/mail_png"
+                android:padding="3dp"/>
+
+
+            <TextView
+                android:id="@+id/match_item_email"
+                android:layout_width="130dp"
+                android:layout_height="35dp"
+                android:gravity="center"
+                android:text="@string/email"
+                />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/match_ll_phone"
+            android:layout_width="165dp"
+            android:layout_height="35dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/match_item_duration"
+            android:background="@color/cardview_shadow_start_color"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="25dp">
+
+            <ImageView
+                android:id="@+id/match_item_whatsapp_png"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                app:srcCompat="@drawable/whatsapp_png"
+                android:padding="3dp"/>
+
+
+            <TextView
+                android:id="@+id/match_item_phone"
+                android:layout_width="130dp"
+                android:layout_height="35dp"
+                android:gravity="center"
+                android:text="@string/phone_number"
+
+               />
+
+
+        </LinearLayout>
+
+
+
+        <TextView
+            android:id="@+id/match_item_duration"
+            android:layout_width="200dp"
+            android:layout_height="25dp"
+            android:text=""
+            app:layout_constraintStart_toEndOf="@id/match_item_department"
+            app:layout_constraintTop_toBottomOf="@id/match_item_distance_to_campus"
+            android:paddingStart="10dp"/>
+
+        <TextView
+            android:id="@+id/match_item_distance_to_campus"
+            android:layout_width="200dp"
+            android:layout_height="25dp"
+            android:text=""
+            app:layout_constraintStart_toEndOf="@id/match_item_department"
+            app:layout_constraintTop_toBottomOf="@id/match_item_name_surname"
+            app:layout_constraintBottom_toTopOf="@id/match_item_duration"
+            android:paddingStart="10dp"/>
+
+
+
+
+        <Button
+            android:id="@+id/match_item_accept_button"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:text="@string/accept"
+            app:layout_constraintTop_toBottomOf="@id/match_ll_phone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/match_item_reject_button"
+            android:layout_marginTop="10dp"/>
+
+        <Button
+            android:id="@+id/match_item_reject_button"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:text="@string/reject"
+            app:layout_constraintTop_toBottomOf="@id/match_ll_phone"
+            app:layout_constraintStart_toEndOf="@id/match_item_accept_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="10dp" />
+
+        <Button
+            android:id="@+id/match_item_withdraw_button"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:text="@string/withdraw"
+            app:layout_constraintTop_toBottomOf="@id/match_ll_phone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="10dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.cardview.widget.CardView>
